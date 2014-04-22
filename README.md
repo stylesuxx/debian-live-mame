@@ -1,11 +1,12 @@
 debian-live-mame
 ================
 
-Prerequisits:
+## Prerequisits:
 * Debian
 * live-build package installed
 
-Build iso:
+## Build ISO:
+
     ./build_iso.sh
     
 After that you should have an iso file in the mame-live dir.
