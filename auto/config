@@ -5,4 +5,6 @@ set -e
 lb config noauto \
 	--architectures i386 \
 	--linux-flavours 686-pae \
+	--archive-areas "main contrib non-free" \
+	--bootappend-live "boot=live config username=mame hostname=live-mame.local"
 	"${@}"
