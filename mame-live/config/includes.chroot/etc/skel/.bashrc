@@ -111,4 +111,4 @@ fi
 
 # Load mame
 export SDL_NOMOUSE=1
-mame -video directfb
+mame -video soft
