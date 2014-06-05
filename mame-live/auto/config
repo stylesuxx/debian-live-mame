@@ -1,11 +1,12 @@
 #!/bin/sh
+# loglevel=4 instead of quiet. quiet corrupts the fame buffer
 set -e
 
 lb config noauto \
 	--architectures "i386" \
 	--linux-flavours "686" \
 	--archive-areas "main contrib non-free" \
-	--bootappend-live "boot=live config persistence username=mame hostname=live-mame" \
+	--bootappend-live "boot=live config persistence noeject loglevel=4 username=mame hostname=live-mame" \
 	--memtest "memtest86+" \
 	--iso-application "Live MAME" \
 	--iso-volume "Live MAME" \
