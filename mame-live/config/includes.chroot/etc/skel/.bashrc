@@ -109,6 +109,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Load mame
-export SDL_NOMOUSE=1
-mame -video soft
+if [ $(tty) == /dev/tty1 ]; then
+    /opt/live_mame_starter.sh
+fi
+
+if [ $(tty) == /dev/tty2 ]; then
+    htop
+fi
+
+if [ $(tty) == /dev/tty3 ]; then
+    if [[ -f /home/mame/wifi/last_wifi.conf ]]; then
+        sudo /opt/wifi_auto_connect.sh /home/mame/wifi/last_wifi.conf
+    fi
+fi
